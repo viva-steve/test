@@ -10,7 +10,7 @@ function App() {
 
     (async function getData() {
       try {
-        const result = await axios.get("http://localhost/test");
+        const result = await axios.get("http://15.165.252.175/test");
         setData(result.data);
       } catch (err) {
         console.error(err);
