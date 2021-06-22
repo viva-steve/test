@@ -26,7 +26,7 @@ app.get("/ping", (req, res) => {
   res.send("pong");
 });
 
-app.listen(80, () => {
+app.listen(8080, () => {
   console.log("서버 실행중");
 });
 
