@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const greenlock = require("greenlock-express");
 const app = express();
 
 app.use(
@@ -28,3 +29,11 @@ app.get("/ping", (req, res) => {
 app.listen(80, () => {
   console.log("서버 실행중");
 });
+
+require("greenlock-express")
+  .init({
+    packageRoot: __dirname,
+    configDir: "./greenlock.d",
+    maintainerEmail: "sds11609@gmail.com",
+  })
+  .serve(app);
