@@ -8,6 +8,7 @@ app.use(
     origin: "*",
   })
 );
+app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "/build")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
